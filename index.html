@@ -44,7 +44,8 @@
         theme: {
           extend: {
             colors: {
-              clifford: "#da373d",
+              "hockey-primary-color": "#131318",
+              "hockey-active-color": "#FF4240",
             },
           },
         },
@@ -56,10 +57,10 @@
   </head>
   <body>
     <!-- header section  -->
-    <header>
+    <header class="container mx-auto p-5 md:px-8 lg:px-12 mt-8 lg:mt-12">
       <!-- navigation section  -->
       <nav>
-        <div class="navbar bg-base-100">
+        <div class="navbar">
           <div class="navbar-start">
             <div class="dropdown">
               <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -82,36 +83,57 @@
                 tabindex="0"
                 class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
               >
-                <li><a>Item 1</a></li>
-                <li>
-                  <a>Parent</a>
-                  <ul class="p-2">
-                    <li><a>Submenu 1</a></li>
-                    <li><a>Submenu 2</a></li>
-                  </ul>
-                </li>
-                <li><a>Item 3</a></li>
+                <li><a class="font-bold" href="">Home</a></li>
+                <li><a class="font-bold" href="">About</a></li>
+                <li><a class="font-bold" href="">Pages</a></li>
+                <li><a class="font-bold" href="">Blog</a></li>
+                <li><a class="font-bold" href="">Contact</a></li>
               </ul>
             </div>
-            <a class="btn btn-ghost text-xl">daisyUI</a>
+            <a
+              href=""
+              class="font-extrabold text-2xl md:text-3xl lg:text-4xl text-hockey-primary-color"
+              >Hockey<span class="text-hockey-active-color">’</span>s</a
+            >
           </div>
           <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1">
-              <li><a>Item 1</a></li>
               <li>
-                <details>
-                  <summary>Parent</summary>
-                  <ul class="p-2">
-                    <li><a>Submenu 1</a></li>
-                    <li><a>Submenu 2</a></li>
-                  </ul>
-                </details>
+                <a class="hover:text-hockey-active-color font-bold" href=""
+                  >Home</a
+                >
               </li>
-              <li><a>Item 3</a></li>
+              <li>
+                <a class="hover:text-hockey-active-color font-bold" href=""
+                  >About</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-hockey-active-color font-bold" href=""
+                  >Pages</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-hockey-active-color font-bold" href=""
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-hockey-active-color font-bold" href=""
+                  >Contact</a
+                >
+              </li>
             </ul>
           </div>
           <div class="navbar-end">
-            <a class="btn">Button</a>
+            <i
+              class="fa-solid fa-magnifying-glass text-xl mr-10 cursor-pointer hidden md:block"
+            ></i>
+            <a
+              href=""
+              class="bg-hockey-active-color text-white font-boldtext-lg lg:text-xl px-3 md:px-5 lg:px-6 py-2.5 lg:py-4 rounded-lg"
+              >Get Ticket</a
+            >
           </div>
         </div>
       </nav>
